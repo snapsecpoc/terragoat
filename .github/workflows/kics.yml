@@ -28,7 +28,7 @@ jobs:
       - name: runs KICS scan
         uses: checkmarx/kics-action@v1.4
         with:
-           path: "./,terraform"
+           path: "./,terraform/aws"
            fail_on: high,medium
            output_path: myResults/
       - name: display kics results
