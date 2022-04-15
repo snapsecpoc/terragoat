@@ -20,6 +20,9 @@ jobs:
 
       - name: List all changed files
         run: |
+          files_to_scan = ""
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "$file was changed"
+            files_to_scan = $files_to_scan.",".$file
           done
+          echo $files_to_scan
