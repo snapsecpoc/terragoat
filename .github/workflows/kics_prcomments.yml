@@ -13,6 +13,7 @@ jobs:
       with:
          path: "./"
          output_path: myResults/
+         fail_on: high,medium
          ignore_on_exit: results
          enable_comments: true
    
